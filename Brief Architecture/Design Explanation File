@@ -1,0 +1,64 @@
+ChatPilot – Architecture & Design Overview
+1. Overview
+ChatPilot is a full-stack Django web application that allows users to interact with an AI assistant, track their chat history, and manage authentication—all within a clean, responsive interface.
+
+2. Architecture
+🔧 Backend
+Framework: Django 5.1
+
+Views:
+
+ChatView: Handles AI prompt submission and response
+
+ChatHistoryView: Returns stored messages for the logged-in user
+
+ChatPageView & HistoryPageView: Render styled HTML pages
+
+Models:
+
+Message: Stores user prompts and AI responses with timestamps
+
+Authentication: Django’s built-in login system (LoginView, LogoutView)
+
+Database: SQLite (default for development)
+
+🎨 Frontend
+Templates: Django HTML templates
+
+Styling: Bootstrap 5 for responsive design
+
+Pages:
+
+Homepage with navigation
+
+Chat input form
+
+History view with timestamps
+
+Login page with CSRF protection
+
+🤖 AI Integration
+API: OpenRouter
+
+Flow:
+
+User submits a prompt
+
+Backend sends it to OpenRouter
+
+Response is saved and displayed
+
+3. Flow Diagram
+Code
+User → Login → Homepage → Chat → AI Response → Save to DB → View History
+4. Security
+CSRF protection on all forms
+
+Login required for chat and history views
+
+Session-based authentication
+
+5. Deployment Readiness
+GitHub repository with .gitignore, README.md, and license
+
+Ready for deployment on platforms like Render, Railway, or Heroku
