@@ -1,0 +1,16 @@
+# ChatPilot 🧠💬
+
+A Django-powered AI chat app with login, chat history, and OpenRouter integration.
+
+## Features
+- 🔐 Secure login
+- 💬 AI chat interface
+- 📜 Chat history tracking
+- 🖼️ Bootstrap styling
+
+## Getting Started
+```bash
+git clone https://github.com/YOUR_USERNAME/chatpilot.git
+cd chatpilot
+python manage.py migrate
+python manage.py runserver
